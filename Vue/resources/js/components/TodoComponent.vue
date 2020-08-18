@@ -165,14 +165,6 @@ export default {
        JSON.stringify(this.listProduct))
          
           },
-        filterByName(todo) {
-      // no search, don't filter : 
-       if (this.searchName.length === 0) {
-        return true;
-        }
-
-         return  (todo.name.toLowerCase().indexOf(this.searchName.toLowerCase()) > -1);
-        }, 
         filterByName(todo) { 
        if (this.searchName.length === 0) {
         return true;
@@ -185,7 +177,7 @@ export default {
         return true;
         }
         return  (todo.categories.includes(this.CategorieID));
-        }, 
+        },  
         filterPrice(todo) { 
        if (this.price.length === 0) {
         return true;
@@ -197,18 +189,6 @@ export default {
         }
         
         }, 
-        filterPrice(todo) { 
-       if (this.price.length === 0) {
-        return true;
-        }
-        if(parseInt(this.price) === 10000){
-        return  (parseInt(todo.price) <= parseInt(this.price));
-        }else{
-         return  (parseInt(todo.price) >= parseInt(this.price));
-        }
-        
-        }, 
-
         filterSeller(todo) { 
        if (this.bestSeller.length === 0) {
         return true;
@@ -223,12 +203,8 @@ export default {
         return true;
         }
          return todo.available === this.available;
-        },  
-     
-
-        
+         },  
         },
-
         mounted(){
         this.getCategories() 
         this.getTodos()   
