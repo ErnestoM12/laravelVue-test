@@ -9,9 +9,19 @@ instalar composer
 
 despues de eso agregar la linea de comandos composer install
 
+agregar  la siguiente liena  composer require laravel/ui
 
-instalar node_modules npm install,
+agregar la linea de comando composer dump-autoload
 
-una ves realizado agregar la linea de comando run npm dev
+renombrar el archivo example.env por .env
+
+agregar la linea de comando php artisan key:generate
+ 
+
+ agregar la linea de comando npm install,
+
+ run npm dev
+
+ php artisan serve 
 
 y podra pobras el codigo.
