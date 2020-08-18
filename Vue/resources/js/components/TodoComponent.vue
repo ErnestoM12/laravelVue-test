@@ -3,18 +3,20 @@
  <div class="d-flex justify-content-end"> 
 <button class="btn btn-success col-2  m-3" @click="showCarrito"><i class="fas fa-cart-plus fa-md"></i><span class="bg-danger rounded-circle">{{listProduct.length}}</span></button>
 </div>
-<h1>Filtros</h1> 
- <div class="form-group">
-      <input v-model="searchName" class="form-control" placeholder="Buscar Producto">
-</div>
  <div class="row">
   <div class="col-lg-3 col-md-12 col-12">
+    <h1>Filtros</h1> 
+   <div class="form-group">
+          <input v-model="searchName" class="form-control" placeholder="Buscar Producto">
+    </div>
+
+
     <div class="form-group">
             <label for="type">Categoria</label>
             <select  class="form-control" v-model="CategorieID"    >
              <option v-for="categorie in categories" :value="categorie.categori_id">{{categorie.name}}</option>  
             </select>
-  </div>
+    </div>
 
    <div class="form-group">
             <label for="type">Producto Dispobibles</label>
